@@ -10,13 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_01_030204) do
+ActiveRecord::Schema.define(version: 2023_03_02_150415) do
 
   create_table "cars", force: :cascade do |t|
     t.string "image_url"
     t.string "model"
     t.string "speed"
     t.string "datetime"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "hires", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "car_id"
+    t.date "loan_date"
+    t.date "return_date"
+    t.string "payment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -17,14 +17,28 @@ user3 = User.create(fullname: "June", phonenumber: "098732", idnumber: "25676543
 
 puts "🌱 Seeding owners..."
 # create owner instance
-owner1 = Owner.create(name: "Anonymous Panda", contactnumber: "5678908765", nationalid: "45678765", car_id: car1)
-owner2 = Owner.create(name: "Jenkins", contactnumber: "5678908765", nationalid: "35647892", car_id: car2)
-owner3 = Owner.create(name: "Milan", contactnumber: "5678908765", nationalid: "24567", car_id: car3)
+owner1 = Owner.create(name: "Anonymous Panda", contactnumber: "5678908765", nationalid: "45678765", car_id: 1)
+owner2 = Owner.create(name: "Jenkins", contactnumber: "5678908765", nationalid: "35647892", car_id: 2)
+owner3 = Owner.create(name: "Milan", contactnumber: "5678908765", nationalid: "24567", car_id: 3)
+
+puts "🌱 Seeding hires..."
+# create hire instance
+h1 = Hire.create(
+    # loan_date: Date.today, return_date: Date.today + hire_period:
+    loan_date: Date.today, return_date: Date.today + 10, user_id: 1, car_id: 1, payment: "cleared",
+)
+h2 = Hire.create(
+    loan_date: Date.today, return_date: Date.today + 14, user_id: 2, car_id: 3, payment: "Pending",
+)
+h3 = Hire.create(
+    loan_date: Date.today, return_date: Date.today + 14, user_id: 3, car_id: 3, payment: "Cleared",
+)
+
 
 puts "🌱 Seeding reviews..."
 # create review instance
-review1 = Review.create(review: "Very fast and real comfy", user_id: user1, car_id: car1, owner_id: owner1)
-review2 = Review.create(review: "Not bad", user_id: user1, car_id: car1, owner_id: owner1)
-review3 = Review.create(review: "Nice", user_id: user3, car_id: car3, owner_id: owner3)
+review1 = Review.create(review: "Very fast and real comfy", user_id: 1, car_id: 1, owner_id: 1)
+review2 = Review.create(review: "Not bad", user_id: 1, car_id: 1, owner_id: 1)
+review3 = Review.create(review: "Nice", user_id: 3, car_id: 3, owner_id: 3)
 
 puts "✅ Done seeding!"
