@@ -51,8 +51,6 @@ group :test do
   gem "rspec-json_expectations", "~> 2.2"
 end
 
-
-
 # add a production group
 group :production do
   gem 'pg', '~> 1.4', '>= 1.4.6'
