@@ -53,7 +53,7 @@ end
 
 
 
-add a production group
+# add a production group
 group :production do
   gem 'pg', '~> 1.4', '>= 1.4.6'
   gem 'puma', '~> 6.1', '>= 6.1.1'
