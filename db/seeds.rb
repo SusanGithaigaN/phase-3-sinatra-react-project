@@ -17,9 +17,9 @@ user3 = User.create(fullname: "June", phonenumber: "098732", idnumber: "25676543
 
 puts "🌱 Seeding owners..."
 # create owner instance
-owner1 = Owner.create(name: "Anonymous Panda", contactnumber: "5678908765", nationalid: "45678765", car_id: 1)
-owner2 = Owner.create(name: "Jenkins", contactnumber: "5678908765", nationalid: "35647892", car_id: 2)
-owner3 = Owner.create(name: "Milan", contactnumber: "5678908765", nationalid: "24567", car_id: 3)
+owner1 = Owner.create(name: "Anonymous Panda", contactnumber: "5678908765", nationalid: "45678765", car_id: 1, car_model: car1.model)
+owner2 = Owner.create(name: "Jenkins", contactnumber: "5678908765", nationalid: "35647892", car_id: 2, car_model: car2.model)
+owner3 = Owner.create(name: "Milan", contactnumber: "5678908765", nationalid: "24567", car_id: 3, car_model: car3.model)
 
 puts "🌱 Seeding hires..."
 # create hire instance

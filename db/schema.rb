@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2023_03_02_150415) do
     t.string "contactnumber"
     t.string "nationalid"
     t.integer "car_id"
+    t.string "car_model"
   end
 
   create_table "reviews", force: :cascade do |t|

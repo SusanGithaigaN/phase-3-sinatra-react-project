@@ -5,6 +5,7 @@ class CreateOwners < ActiveRecord::Migration[6.1]
       t.string :contactnumber
       t.string :nationalid
       t.integer :car_id
+      t.string :car_model
     end
   end
 end
