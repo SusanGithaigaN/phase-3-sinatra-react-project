@@ -107,10 +107,21 @@ end
 
   # get all car users
   get '/car/:id/users' do
+    # get the specific car
     car = Car.find_by(id: params[:id])
-    car.events.find_all do |car|
-      car.user_id
+    car.reviews.find_all do |review|
+      review.user_id
     end.to_json(only: [:id], include: {user: {only: [:id, :fullname, :phonenumber, :idnumber, :address]}})
   end
+
+    # get all car reviews
+    get '/car/:id/reviews' do
+      # get the specific car
+      car = Car.find_by(id: params[:id])
+      car.users.find_all do |user|
+        user.user_id
+      end.to_json(only: [:id], include: {user: {only: [:id, :review, :user_id, :car_id, :ownner_id]}})
+    end
+
 end
 
