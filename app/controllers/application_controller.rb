@@ -5,7 +5,7 @@ class ApplicationController < Sinatra::Base
   get "/" do
     # get all cars in array format
    cars = Car.all
-   p cars
+  #  p cars
    cars.to_json()
   end
 
@@ -13,8 +13,8 @@ class ApplicationController < Sinatra::Base
     get "/car/:pk" do
       # id: in database
       # pk: in url
-      car = Car.find_by(id: params[:pk])
-      car.to_json
+      car = Car.find_by(id: params[:id])
+      car.to_json()
     end
   
   # post a car(create new instances)
@@ -23,7 +23,7 @@ class ApplicationController < Sinatra::Base
       image_url: params[:image_url],
       model: params[:model],
       speed: params[:speed],
-      datetime: params[:datetime],
+      datetime: params[:datetime]
     ) 
     car.save()
     {
@@ -87,10 +87,7 @@ class ApplicationController < Sinatra::Base
     if registered_user
       hire = Hire.create(
         user_id: registered_user.id,
-        car_id: car.id,
-        # loan_date: loan_date.id,
-        # return_date: return_date.id,
-        # payment: payment.id
+        car_id: car.id
       )
       hire.save
       {
@@ -114,14 +111,14 @@ end
     end.to_json(only: [:id], include: {user: {only: [:id, :fullname, :phonenumber, :idnumber, :address]}})
   end
 
-    # get all car reviews
-    get '/car/:id/reviews' do
-      # get the specific car
-      car = Car.find_by(id: params[:id])
-      car.users.find_all do |user|
-        user.user_id
-      end.to_json(only: [:id], include: {user: {only: [:id, :review, :user_id, :car_id, :ownner_id]}})
-    end
+    # # get all car reviews
+    # get '/car/:id/reviews' do
+    #   # get the specific car
+    #   car = Car.find_by(id: params[:id])
+    #   car.users.find_all do |user|
+    #     user.user_id
+    #   end.to_json(only: [:id], include: {user: {only: [:id, :review, :user_id, :car_id, :owner_id]}})
+    # end
 
 end
 
