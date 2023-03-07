@@ -7,5 +7,6 @@ class CreateMigrationReviews < ActiveRecord::Migration[6.1]
         t.integer :owner_id
         t.timestamps
     end
+    
   end
 end

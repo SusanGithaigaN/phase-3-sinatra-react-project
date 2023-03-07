@@ -41,5 +41,7 @@ puts "🌱 Seeding reviews..."
 review1 = Review.create(review: "Very fast and real comfy", user_id: 1, car_id: 1, owner_id: 1)
 review2 = Review.create(review: "Not bad", user_id: 1, car_id: 1, owner_id: 1)
 review3 = Review.create(review: "Nice", user_id: 3, car_id: 3, owner_id: 3)
+review4 = Review.create(review: "Comfortable", user_id: 3, car_id: 2, owner_id: 3)
+review5 = Review.create(review: "Too slow", user_id: 1, car_id: 2, owner_id: 1)
 
 puts "✅ Done seeding!"
