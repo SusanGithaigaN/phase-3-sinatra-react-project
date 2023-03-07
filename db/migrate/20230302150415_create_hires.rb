@@ -5,7 +5,6 @@ class CreateHires < ActiveRecord::Migration[6.1]
     t.integer :car_id
     t.date :loan_date
     t.date :return_date
-    # t.integer :hire_period
     t.string :payment
     t.timestamps
     end
