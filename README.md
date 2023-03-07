@@ -82,7 +82,7 @@ This will run your server on port
 [http://localhost:9292](http://localhost:9292).
 
 ### Frontend Setup
-
+Link to [front-end](https://github.com/SusanGithaigaN/front-end)
 Your backend and your frontend should be in **two different repositories**.
 
 Create a new repository in a **separate folder** with a React app for your
