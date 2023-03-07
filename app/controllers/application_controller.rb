@@ -5,7 +5,6 @@ class ApplicationController < Sinatra::Base
     get "/" do
       # get all cars in array format
     cars = Car.all
-    #  p cars
     cars.to_json()
     end
 
@@ -15,7 +14,7 @@ class ApplicationController < Sinatra::Base
     users.to_json()
     end
 
-    # get specific user reviews
+    # get user reviews by ID
     get '/users/:id/reviews/:review_id.json' do
       user = User.find(params[:id])
       review = user.reviews.find(params[:review_id])
