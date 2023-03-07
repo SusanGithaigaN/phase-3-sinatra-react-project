@@ -29,7 +29,7 @@ gem "sinatra-activerecord", "~> 2.0"
 gem "rake", "~> 13.0"
 
 # Provides functionality to interact with a SQLite3 database
-# gem "sqlite3", "~> 1.4"
+gem "sqlite3", "~> 1.4"
 
 # Require all files in a folder
 gem "require_all", "~> 3.0"
@@ -51,8 +51,8 @@ group :test do
   gem "rspec-json_expectations", "~> 2.2"
 end
 
-# add a production group
-group :production do
-  gem 'pg', '~> 1.4', '>= 1.4.6'
-  gem 'puma', '~> 6.1', '>= 6.1.1'
-end
+# # add a production group
+# group :production do
+#   gem 'pg', '~> 1.4', '>= 1.4.6'
+#   gem 'puma', '~> 6.1', '>= 6.1.1'
+# end

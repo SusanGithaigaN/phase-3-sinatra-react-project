@@ -129,6 +129,16 @@ class ApplicationController < Sinatra::Base
       end.to_json(only: [:id], include: {user: {only: [:id, :fullname, :phonenumber, :idnumber, :address]}})
     end
 
+    # user authentication
+    # users
+    # t.string :fullname
+    # t.string :phonenumber
+    # t.string :idnumber
+    # t.string :address
+    # t.timestamps
+    
+
+    # admin
 
 end
 
