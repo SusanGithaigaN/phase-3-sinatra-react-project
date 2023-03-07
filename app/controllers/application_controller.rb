@@ -11,9 +11,7 @@ class ApplicationController < Sinatra::Base
 
     # get all users
     get "/users/" do
-      # get all cars in array format
     users = User.all
-    #  p cars
     users.to_json()
     end
 
