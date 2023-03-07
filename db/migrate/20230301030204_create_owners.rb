@@ -8,7 +8,7 @@ class CreateOwners < ActiveRecord::Migration[6.1]
       t.string :car_model
       # user authentication
       t.string :email
-      t.string :admin_password
+      t.string :password_digest
     end
   end
 end

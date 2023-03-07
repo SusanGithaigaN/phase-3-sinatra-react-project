@@ -20,9 +20,10 @@ user5 = User.create(fullname: "Test user", phonenumber: "629201", idnumber: "893
 
 puts "🌱 Seeding owners..."
 # create owner instance
-owner1 = Owner.create(name: "Anonymous Panda", contactnumber: "5678908765", nationalid: "45678765", car_id: 1, car_model: car1.model)
-owner2 = Owner.create(name: "Jenkins", contactnumber: "5678908765", nationalid: "35647892", car_id: 2, car_model: car2.model)
-owner3 = Owner.create(name: "Milan", contactnumber: "5678908765", nationalid: "24567", car_id: 3, car_model: car3.model)
+# password123: to be replaced by user with desired password
+owner1 = Owner.create(name: "Anonymous Panda", contactnumber: "5678908765", car_id: 1, car_model: car1.model, email:"anonymouspanda11@gmail.com", password: "password123" )
+owner2 = Owner.create(name: "Jenkins", contactnumber: "5678908765", car_id: 2, car_model: car2.model, email:"jenkins01@gmail.com", password: "password123" )
+owner3 = Owner.create(name: "Milan", contactnumber: "5678908765", car_id: 3, car_model: car3.model, email:"milan033@gmail.com", password: "password123" )
 
 puts "🌱 Seeding hires..."
 # create hire instance

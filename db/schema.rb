@@ -12,10 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2023_03_02_150415) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-  enable_extension "timescaledb"
-
   create_table "cars", force: :cascade do |t|
     t.string "image_url"
     t.string "model"
@@ -38,9 +34,10 @@ ActiveRecord::Schema.define(version: 2023_03_02_150415) do
   create_table "owners", force: :cascade do |t|
     t.string "name"
     t.string "contactnumber"
-    t.string "nationalid"
     t.integer "car_id"
     t.string "car_model"
+    t.string "email"
+    t.string "password_digest"
   end
 
   create_table "reviews", force: :cascade do |t|
