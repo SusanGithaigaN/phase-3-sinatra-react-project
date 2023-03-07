@@ -15,6 +15,8 @@ user1 = User.create(fullname: "Nancy", phonenumber: "2345614", idnumber: "654333
 user2 = User.create(fullname: "Joan", phonenumber: "04567890", idnumber: "253424312", address: "33 Kitale")
 user3 = User.create(fullname: "June", phonenumber: "098732", idnumber: "25676543", address: "34 Nakuru")
 user4 = User.create(fullname: "Jim", phonenumber: "092713", idnumber: "67893873", address: "354 Naru")
+user5 = User.create(fullname: "Test user", phonenumber: "629201", idnumber: "8936182", address: "123...Testing")
+
 
 puts "🌱 Seeding owners..."
 # create owner instance
