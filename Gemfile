@@ -4,6 +4,9 @@ source "https://rubygems.org"
 # https://github.com/sinatra/sinatra
 gem "sinatra", "~> 2.1"
 
+# sqlite
+gem 'sqlite3', '~> 1.6', '>= 1.4.2'
+
 # A fast and simple web server
 # https://github.com/macournoyer/thin
 gem "thin", "~> 1.8"
