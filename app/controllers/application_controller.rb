@@ -105,7 +105,10 @@ class ApplicationController < Sinatra::Base
       if registered_user
         hire = Hire.create(
           user_id: registered_user.id,
-          car_id: car.id
+          car_id: car.id,
+          loan_date: params[:loan_date],
+          return_date: params[:return_date],
+          payment: params[:payment]
         )
         hire.save
         {
