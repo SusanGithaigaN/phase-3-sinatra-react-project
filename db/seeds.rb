@@ -11,11 +11,11 @@ car3 =  Car.create(image_url: "https://bit.ly/3SGLGN0", model: "MAZDA DEMIO", sp
 
 puts "🌱 Seeding users ..."
 # create user instance
-user1 = User.create(fullname: "Nancy", phonenumber: "2345614", idnumber: "6543334", address: "14 South Wales")
-user2 = User.create(fullname: "Joan", phonenumber: "04567890", idnumber: "253424312", address: "33 Kitale")
-user3 = User.create(fullname: "June", phonenumber: "098732", idnumber: "25676543", address: "34 Nakuru")
-user4 = User.create(fullname: "Jim", phonenumber: "092713", idnumber: "67893873", address: "354 Naru")
-user5 = User.create(fullname: "Test user", phonenumber: "629201", idnumber: "8936182", address: "123...Testing")
+user1 = User.create(fullname: "Nancy", phonenumber: "2345614", idnumber: "6543334", address: "14 South Wales", password: '12345', username: 'nancy')
+user2 = User.create(fullname: "Joan", phonenumber: "04567890", idnumber: "253424312", address: "33 Kitale", password: '12345', username: 'joan')
+user3 = User.create(fullname: "June", phonenumber: "098732", idnumber: "25676543", address: "34 Nakuru", password: '12345', username: 'june')
+user4 = User.create(fullname: "Jim", phonenumber: "092713", idnumber: "67893873", address: "354 Naru", password: '12345', username: 'jim')
+user5 = User.create(fullname: "Test user", phonenumber: "629201", idnumber: "8936182", address: "123...Testing", password: '12345', username: 'test user')
 
 
 puts "🌱 Seeding owners..."
@@ -41,10 +41,10 @@ h3 = Hire.create(
 
 puts "🌱 Seeding reviews..."
 # create review instance
-review1 = Review.create(review: "Very fast and real comfy", user_id: 1, car_id: 1, owner_id: 1)
-review2 = Review.create(review: "Not bad", user_id: 1, car_id: 1, owner_id: 1)
-review3 = Review.create(review: "Nice", user_id: 3, car_id: 3, owner_id: 3)
-review4 = Review.create(review: "Comfortable", user_id: 3, car_id: 2, owner_id: 2)
-review5 = Review.create(review: "Too slow", user_id: 1, car_id: 2, owner_id: 2)
+review1 = Review.create!(review: "Very fast and real comfy", user_id: 1, car_id: 1, owner_id: 1)
+review2 = Review.create!(review: "Not bad", user_id: 1, car_id: 1, owner_id: 1)
+review3 = Review.create!(review: "Nice", user_id: 3, car_id: 3, owner_id: 3)
+review4 = Review.create!(review: "Comfortable", user_id: 3, car_id: 2, owner_id: 2)
+review5 = Review.create!(review: "Too slow", user_id: 1, car_id: 2, owner_id: 2)
 
 puts "✅ Done seeding!"

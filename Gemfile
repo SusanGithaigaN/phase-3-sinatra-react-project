@@ -1,11 +1,10 @@
 source "https://rubygems.org"
 
+ruby '2.7.4'
+
 # A DSL for quickly creating web applications
 # https://github.com/sinatra/sinatra
 gem "sinatra", "~> 2.1"
-
-# sqlite
-gem 'sqlite3', '~> 1.6', '>= 1.4.2'
 
 # A fast and simple web server
 # https://github.com/macournoyer/thin
@@ -19,6 +18,11 @@ gem "rack-contrib", "~> 2.3"
 # https://github.com/cyu/rack-cors
 gem "rack-cors", "~> 1.1"
 
+
+gem "faker"
+
+gem "bcrypt"
+
 # An object-relational mapper
 # https://guides.rubyonrails.org/active_record_basics.html
 gem "activerecord", "~> 6.1"
@@ -31,19 +35,21 @@ gem "sinatra-activerecord", "~> 2.0"
 # https://github.com/ruby/rake
 gem "rake", "~> 13.0"
 
-# # Provides functionality to interact with a SQLite3 database
-# gem "sqlite3", "~> 1.4"
+# Provides functionality to interact with a SQLite3 database
+gem "pry", "~> 0.14.1"
 
+gem "shotgun"
 # Require all files in a folder
 gem "require_all", "~> 3.0"
 
 # These gems will only be used when we are running the application locally
 group :development do
-  gem "pry", "~> 0.14.1"
+ gem "sqlite3", "~> 1.4"
 
   # Automatically reload when there are changes
   # https://github.com/alexch/rerun
   gem "rerun"
+  gem 'puma'
 end
 
 # These gems will only be used when we are running tests
@@ -52,12 +58,4 @@ group :test do
   gem "rack-test", "~> 1.1"
   gem "rspec", "~> 3.10"
   gem "rspec-json_expectations", "~> 2.2"
-end
-# # remove this before deployment
-gem 'bcrypt', '~> 3.1', require: 'bcrypt'
-
-# add a production group
-group :production do
-  gem 'pg', '~> 1.4', '>= 1.4.6'
-  gem 'puma', '~> 6.1', '>= 6.1.1'
 end
